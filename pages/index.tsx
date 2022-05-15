@@ -1,6 +1,6 @@
+import { APP_CONFIG } from "config";
 import { useRouter } from "next/router";
-import React, { FC } from "react";
-import { useEffect } from "react";
+import React, { FC, useEffect } from "react";
 import styled from "styled-components";
 
 interface IndexProps {}
@@ -8,12 +8,11 @@ interface IndexProps {}
 const IndexWrapper = styled.div``;
 
 const Index: FC<IndexProps> = (props: IndexProps) => {
-
   const router = useRouter();
 
   useEffect(() => {
-    router.push("/home");
-  }, [])
+    router.push(APP_CONFIG?.basePagePath);
+  }, []);
 
   return <IndexWrapper></IndexWrapper>;
 };
