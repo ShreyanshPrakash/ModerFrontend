@@ -6,7 +6,7 @@ interface HomeProps {}
 const HomeWrapper = styled.div``;
 
 const Home: FC<HomeProps> = ({}: HomeProps) => {
-  return <HomeWrapper>Hello world</HomeWrapper>;
+  return <HomeWrapper>Home page</HomeWrapper>;
 };
 
 export default Home;
